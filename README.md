@@ -19,8 +19,8 @@ senior-software-engineering-notes/
 ├── README.md
 │
 ├── API Design/
-│   ├── ApplicationLayerProtocols.md
-│   └── ApplicationCommunicationTechnologies-DetailedInterviewGuide.md
+│   ├── CommunicationProtocols-Short.md
+│   └── CommunicationProtocols-Detail.md
 │
 ├── Java/
 ├── Spring Boot/
@@ -374,8 +374,8 @@ The goal is to understand the engineering trade-offs and explain them using prac
 
 # Suggested Reading Order
 
-1. [Application Communication Protocols and Patterns](API%20Design/ApplicationLayerProtocols.md)
-2. [Application Communication Technologies — Detailed Interview Guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md)
+1. [Application Communication Protocols and Patterns](API%20Design/CommunicationProtocols-Short.md)
+2. [Application Communication Technologies — Detailed Interview Guide](API%20Design/CommunicationProtocols-Detail.md)
 3. REST API Design
 4. Microservices Communication
 5. Event-Driven Architecture
