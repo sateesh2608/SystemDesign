@@ -1,17 +1,17 @@
 # Senior Software Engineering Notes
 
-A structured collection of software engineering notes covering API design, Java, Spring Boot, microservices, AWS, databases, system design, DevOps, and interview preparation.
+A structured collection of notes covering API design, networking, Java, Spring Boot, microservices, AWS, databases, system design, DevOps, and senior-level interview preparation.
 
-This repository is intended to serve as:
+This repository serves as:
 
-* A personal engineering knowledge base
-* A quick revision guide for technical interviews
-* A reference for backend and full-stack architecture concepts
-* A practical learning resource for senior software engineers
+- A personal engineering knowledge base
+- A technical interview revision guide
+- A reference for backend and full-stack architecture concepts
+- A practical learning resource for senior software engineers
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 senior-software-engineering-notes/
@@ -19,8 +19,12 @@ senior-software-engineering-notes/
 ├── README.md
 │
 ├── API Design/
-│   ├── CommunicationProtocols-Short.md
-│   └── CommunicationProtocols-Detail.md
+│   ├── ApplicationLayerProtocols.md
+│   └── ApplicationCommunicationTechnologies-DetailedInterviewGuide.md
+│
+├── Networking/
+│   ├── TCPvsUDP-Short.md
+│   └── TCPvsUDP-Detail.md
 │
 ├── Java/
 ├── Spring Boot/
@@ -35,321 +39,233 @@ senior-software-engineering-notes/
 
 ---
 
-# API Design
+# Quick Navigation
 
-The API Design section covers communication styles, protocols, API patterns, scalability considerations, security, and interview preparation.
-
-| Topic                                                                                                                                            | Description                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Application Communication Protocols and Patterns](API%20Design/ApplicationLayerProtocols.md)                                                    | High-level overview and evolution of REST, GraphQL, gRPC, Polling, Long Polling, Server-Sent Events, WebSockets, and WebRTC                                                                    |
-| [Application Communication Technologies — Detailed Interview Guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md) | Detailed explanation of each communication technology, including internal working, security, scalability, failure handling, practical scenarios, interview questions, and readiness checklists |
+| Category | Guide | Level | Description |
+|---|---|---|---|
+| API Design | [Application Communication Protocols and Patterns](API%20Design/ApplicationLayerProtocols.md) | Overview | Concise explanation of REST, GraphQL, gRPC, Polling, Long Polling, SSE, WebSockets, and WebRTC |
+| API Design | [Application Communication Technologies — Detailed Interview Guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md) | Detailed | Internal behavior, scalability, security, failure handling, scenarios, and interview questions |
+| Networking | [TCP vs UDP](Networking/TCPvsUDP.md) | Overview | Concise explanation of the transport layer, TCP, UDP, key differences, use cases, and common interview questions |
+| Networking | [TCP vs UDP — Detailed Interview Guide](Networking/TCPvsUDP-DetailedInterviewGuide.md) | Detailed | Handshakes, reliability, flow control, congestion control, datagrams, QUIC, troubleshooting, and interview preparation |
 
 ---
+
+# API Design
 
 ## Application Communication Protocols and Patterns
 
-The [Application Communication Protocols and Patterns](API%20Design/ApplicationLayerProtocols.md) document provides a concise overview of application communication technologies.
+[Read the overview](API%20Design/ApplicationLayerProtocols.md)
 
-It explains two major evolution tracks.
+Covers:
 
-### API Communication
-
-```text
-SOAP
-   |
-   v
-REST
-   |
-   +----------------+
-   |                |
-   v                v
-GraphQL            gRPC
-```
-
-### Real-Time Communication
-
-```text
-Polling
-   |
-   v
-Long Polling
-   |
-   v
-Server-Sent Events
-   |
-   v
-WebSockets
-   |
-   v
-WebRTC
-```
-
-Topics covered:
-
-* REST
-* GraphQL
-* gRPC
-* Polling
-* Long Polling
-* Server-Sent Events
-* WebSockets
-* WebRTC
-* Technology comparison
-* When to choose each communication mechanism
-
-This document is useful for quickly understanding what problem each technology solves.
-
----
+- REST
+- GraphQL
+- gRPC
+- Polling
+- Long Polling
+- Server-Sent Events
+- WebSockets
+- WebRTC
+- Communication-pattern selection
 
 ## Detailed Application Communication Guide
 
-The [Application Communication Technologies — Detailed Interview Guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md) provides an in-depth explanation of every communication technology.
+[Read the detailed interview guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md)
 
-It includes:
+Covers:
 
-* Internal working
-* Architecture flow
-* HTTP methods and status codes
-* REST constraints
-* Idempotency
-* Pagination and caching
-* GraphQL schemas and resolvers
-* GraphQL N+1 problem
-* Protocol Buffers
-* gRPC streaming models
-* Polling optimization
-* Exponential backoff and jitter
-* SSE event format
-* WebSocket handshake
-* WebSocket scaling and delivery guarantees
-* WebRTC signaling
-* STUN, TURN, ICE, SDP
-* Mesh, SFU, and MCU architectures
-* Security considerations
-* Performance considerations
-* Failure handling
-* Scenario-based interview questions
-* Interview readiness checklists
-
-This guide is intended for deeper learning and senior-level interview preparation.
+- REST constraints and API design
+- HTTP methods and status codes
+- Idempotency
+- Pagination and caching
+- GraphQL schemas and resolvers
+- N+1 queries and DataLoader
+- gRPC and Protocol Buffers
+- Streaming models
+- Polling and long polling
+- SSE event delivery
+- WebSocket scaling
+- WebRTC signaling, STUN, TURN, ICE, SFU, and MCU
+- Security, failure handling, and interview questions
 
 ---
 
-# Planned Topics
+# Networking
 
-## REST API Design
+## TCP vs UDP Overview
 
-* Resource naming conventions
-* HTTP methods
-* HTTP status codes
-* Idempotency
-* Pagination
-* Filtering
-* Sorting
-* API versioning
-* Error response design
-* Content negotiation
-* Caching
-* ETags
-* Rate limiting
-* API security
-* OpenAPI and Swagger
+[Read the concise TCP vs UDP guide](Networking/TCPvsUDP.md)
+
+Covers:
+
+- Transport-layer basics
+- IP addresses, ports, and sockets
+- TCP connection establishment
+- TCP reliability and ordering
+- TCP flow and congestion control
+- UDP datagrams
+- Real-time communication
+- QUIC and HTTP/3
+- TCP vs UDP comparison
+- Common scenarios and interview questions
+
+## TCP vs UDP Detailed Interview Guide
+
+[Read the detailed TCP vs UDP guide](Networking/TCPvsUDP-DetailedInterviewGuide.md)
+
+Covers:
+
+- Transport-layer internals
+- TCP segment fields
+- Three-way handshake
+- Sequence and acknowledgement numbers
+- Retransmission and SACK
+- Sliding windows
+- Flow control
+- Congestion control
+- TCP termination and `TIME_WAIT`
+- UDP headers and datagrams
+- Application-level reliability
+- Broadcast and multicast
+- Jitter buffers and forward error correction
+- QUIC and HTTP/3
+- Production troubleshooting and observability
+- Detailed interview questions and readiness checklist
 
 ---
 
-## Microservices
+# Planned Networking Topics
 
-* Microservices architecture
-* Service decomposition
-* Synchronous communication
-* Asynchronous communication
-* Event-driven architecture
-* Saga pattern
-* Compensating transactions
-* Circuit breaker
-* Retry and timeout handling
-* Service discovery
-* Distributed tracing
-* Transactional outbox
-* Dead-letter queues
-* Idempotent consumers
-* Eventual consistency
+```text
+Networking/
+│
+├── TCPvsUDP.md
+├── TCPvsUDP-DetailedInterviewGuide.md
+├── OSIAndTCPIPModels.md
+├── IPAddressingAndSubnetting.md
+├── DNSAndDHCP.md
+├── HTTPAndHTTPS.md
+├── TLSAndCertificates.md
+├── RoutingNATAndFirewalls.md
+├── LoadBalancersAndProxies.md
+└── NetworkTroubleshooting.md
+```
+
+Future topics:
+
+- OSI and TCP/IP models
+- IPv4 and IPv6
+- Subnetting
+- DNS and DHCP
+- ARP
+- NAT
+- Routing
+- HTTP and HTTPS
+- TLS handshakes and certificates
+- Firewalls and VPNs
+- Load balancers and proxies
+- Content delivery networks
+- Network troubleshooting
 
 ---
+
+# Planned Engineering Topics
 
 ## Java
 
-* Java 8 features
-* Java 11 features
-* Java 17 features
-* Java 21 features
-* Collections framework
-* HashMap internals
-* Multithreading
-* CompletableFuture
-* Virtual threads
-* Java Memory Model
-* Garbage collection
-* JVM internals
-* Exception handling
-* Functional interfaces
-* Streams
-* Optional
-* Records
-* Sealed classes
-
----
+- Java 8, 11, 17, and 21
+- Collections and HashMap internals
+- Multithreading and concurrency
+- CompletableFuture
+- Virtual threads
+- Java Memory Model
+- JVM and garbage collection
 
 ## Spring Boot
 
-* Spring Boot fundamentals
-* Dependency injection
-* Spring annotations
-* Spring MVC
-* REST API development
-* Exception handling
-* Validation
-* Spring Data JPA
-* Hibernate
-* Spring Security
-* OAuth 2.0
-* OpenID Connect
-* JWT validation
-* Actuator
-* Configuration management
-* Testing with JUnit and Mockito
-* Resilience4j
-* Spring Boot on AWS
+- Dependency injection
+- Spring MVC
+- REST APIs
+- Validation and exception handling
+- Spring Data JPA
+- Spring Security
+- OAuth 2.0, OIDC, and JWT
+- Actuator
+- Resilience4j
+- Testing
 
----
+## Microservices
+
+- Service decomposition
+- Synchronous and asynchronous communication
+- Event-driven architecture
+- Saga pattern
+- Transactional outbox
+- Circuit breaker
+- Retry and timeout handling
+- Distributed tracing
+- Eventual consistency
 
 ## AWS
 
-* Application Load Balancer
-* Elastic Container Service
-* Elastic Container Registry
-* AWS Lambda
-* Amazon SQS
-* Dead-letter queues
-* Amazon SNS
-* Amazon S3
-* Amazon RDS
-* Amazon CloudWatch
-* AWS IAM
-* VPC
-* Route 53
-* Auto Scaling
-* Cloud-native monitoring
-* Infrastructure as code
-
----
+- ALB
+- ECS and ECR
+- Lambda
+- SQS and SNS
+- RDS
+- CloudWatch
+- IAM
+- VPC
+- Route 53
+- Auto Scaling
 
 ## Databases
 
-* PostgreSQL
-* Oracle
-* DB2
-* Database normalization
-* Indexes
-* Transactions
-* ACID properties
-* Isolation levels
-* Optimistic locking
-* Pessimistic locking
-* Query optimization
-* Connection pooling
-* Database partitioning
-* Replication
-* Sharding
-* NoSQL databases
-* SQL vs NoSQL
-
----
+- PostgreSQL, Oracle, and DB2
+- Indexing
+- Transactions and isolation levels
+- Optimistic and pessimistic locking
+- Query optimization
+- Partitioning
+- Replication
+- Sharding
+- SQL vs NoSQL
 
 ## System Design
 
-* URL shortener
-* Notification system
-* Chat application
-* Payment system
-* Order management system
-* Rate limiter
-* Distributed cache
-* File storage system
-* Logging platform
-* Monitoring system
-* Video streaming platform
-* Search autocomplete
-* API gateway design
-* Event-driven systems
-
----
+- URL shortener
+- Notification system
+- Chat system
+- Payment system
+- Rate limiter
+- Distributed cache
+- File storage
+- Monitoring and logging
+- Video streaming
+- Search autocomplete
 
 ## Docker and Kubernetes
 
-* Docker images
-* Containers
-* Dockerfile
-* RUN, CMD, and ENTRYPOINT
-* Docker networking
-* Docker volumes
-* Multi-stage builds
-* Kubernetes architecture
-* Pods
-* Deployments
-* Services
-* ConfigMaps
-* Secrets
-* Ingress
-* Horizontal Pod Autoscaler
-* Helm
-* Container security
-* CI/CD deployment patterns
-
----
-
-## Design Patterns
-
-* SOLID principles
-* Singleton
-* Factory
-* Abstract Factory
-* Builder
-* Strategy
-* Observer
-* Adapter
-* Facade
-* Decorator
-* Template Method
-* Chain of Responsibility
-* Command
-* Proxy
-* Repository pattern
-
----
-
-# Target Audience
-
-This repository is useful for:
-
-* Senior Software Engineers
-* Java Developers
-* Spring Boot Developers
-* Backend Engineers
-* Full-Stack Engineers
-* Technical Leads
-* Solution Architects
-* Developers preparing for system design interviews
-* Developers preparing for senior engineering interviews
+- Images and containers
+- Dockerfile
+- RUN, CMD, and ENTRYPOINT
+- Networking and volumes
+- Multi-stage builds
+- Pods, deployments, and services
+- ConfigMaps and secrets
+- Ingress
+- Autoscaling
+- Helm
+- Container security
 
 ---
 
 # Learning Approach
 
-The repository focuses on understanding:
+Each guide aims to answer:
 
 ```text
-What problem does the technology solve?
+What problem does this technology solve?
 
 How does it work internally?
 
@@ -366,69 +282,47 @@ What can fail?
 What is commonly asked in interviews?
 ```
 
-The goal is not to memorize definitions.
-
-The goal is to understand the engineering trade-offs and explain them using practical examples.
+The goal is to understand engineering trade-offs rather than memorize definitions.
 
 ---
 
 # Suggested Reading Order
 
-1. [Application Communication Protocols and Patterns](API%20Design/CommunicationProtocols-Short.md)
-2. [Application Communication Technologies — Detailed Interview Guide](API%20Design/CommunicationProtocols-Detail.md)
-3. REST API Design
-4. Microservices Communication
-5. Event-Driven Architecture
-6. Resilience Patterns
-7. Distributed System Design
-8. Security and Observability
+1. [Application Communication Protocols and Patterns](API%20Design/ApplicationLayerProtocols.md)
+2. [Application Communication Technologies — Detailed Interview Guide](API%20Design/ApplicationCommunicationTechnologies-DetailedInterviewGuide.md)
+3. [TCP vs UDP](Networking/TCPvsUDP.md)
+4. [TCP vs UDP — Detailed Interview Guide](Networking/TCPvsUDP-DetailedInterviewGuide.md)
+5. OSI and TCP/IP Models
+6. IP Addressing and Subnetting
+7. DNS and DHCP
+8. HTTP, HTTPS, and TLS
+9. Microservices Communication
+10. Distributed Systems and Resilience
 
 ---
 
 # Repository Status
 
-This repository is actively being expanded.
-
 ```text
 API Design              In Progress
-Java                   Planned
-Spring Boot            Planned
-Microservices          Planned
-AWS                    Planned
-Databases              Planned
-System Design          Planned
-Docker and Kubernetes  Planned
-Design Patterns        Planned
-Interview Notes        Planned
+Networking              In Progress
+Java                    Planned
+Spring Boot             Planned
+Microservices           Planned
+AWS                     Planned
+Databases               Planned
+System Design           Planned
+Docker and Kubernetes   Planned
+Design Patterns         Planned
+Interview Notes         Planned
 ```
-
----
-
-# Contribution and Usage
-
-These notes are maintained as a personal learning and interview preparation resource.
-
-The examples are intentionally simplified where necessary so that the underlying concepts remain easy to understand.
-
-Before applying any design in production, consider:
-
-* Business requirements
-* Expected traffic
-* Security requirements
-* Availability requirements
-* Infrastructure limitations
-* Team expertise
-* Operational complexity
-* Cost
-* Monitoring
-* Failure recovery
 
 ---
 
 # Disclaimer
 
-The technologies documented in this repository should be selected based on the problem being solved.
+The technologies in this repository should be selected based on the problem being solved.
 
-There is no single communication protocol, framework, database, or architecture that is best for every application.
+There is no single protocol, framework, database, or architecture that is best for every system.
 
-Good software architecture is based on informed trade-offs rather than technology trends.
+Good engineering decisions are based on informed trade-offs involving reliability, latency, scalability, security, complexity, cost, and team expertise.
